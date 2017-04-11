@@ -1,0 +1,3 @@
+save current settings
+load a settings
+expose querying engine
