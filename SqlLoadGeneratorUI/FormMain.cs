@@ -217,5 +217,23 @@ namespace SqlLoadGeneratorUI
             UpdateCountStatus();
         }
         #endregion
+
+       private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+       {
+            //go through all current open queries and save it into an XML file
+           //MessageBox.Show(@"This is Save settings");
+
+
+           foreach (var ctrl in flowLayoutPanel1.Controls)
+           {
+               //save the settings from control
+           }
+          
+       }
+
+        private void loadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(@"This is Load settings");
+        }
     }
 }

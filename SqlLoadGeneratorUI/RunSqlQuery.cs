@@ -28,7 +28,7 @@ namespace SqlLoadGeneratorUI
         #region Delegates
         public CountStatusChangedHandler CountStatusChanged;
         #endregion
-        
+
         #region Internal Variables
         ContinuousQuery _continuousQuery = null;
         #endregion
@@ -196,8 +196,8 @@ namespace SqlLoadGeneratorUI
             }
             else
             {
-                MessageBox.Show (errorMessage, "Invalid Options"
-                    ,MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(errorMessage, "Invalid Options"
+                    , MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }
@@ -331,7 +331,7 @@ namespace SqlLoadGeneratorUI
             // Load the Databases options from the user preferences
             string[] allDatabases = new string[Properties.Settings.Default.AllDatabases.Count];
             Properties.Settings.Default.AllDatabases.CopyTo(allDatabases, 0);
-            comboBoxDatabase.Items.AddRange (allDatabases);
+            comboBoxDatabase.Items.AddRange(allDatabases);
 
             // Load the Applications options from the user preferences
             string[] allApplications = new string[Properties.Settings.Default.AllApplications.Count];
@@ -340,12 +340,24 @@ namespace SqlLoadGeneratorUI
         }
         #endregion
 
+        #region Get Current Settings
+
+        private string GetCurrentSettings()
+        {
+            string settings;
+
+
+
+            return settings;
+        }
+        #endregion
+
         #region UI Helpers
         private void buttonStart_Click(object sender, EventArgs e)
         {
             StartRunSqlQuery();
         }
-        
+
         private void buttonStop_Click(object sender, EventArgs e)
         {
             StopRunSqlQuery();
@@ -382,6 +394,6 @@ namespace SqlLoadGeneratorUI
             this.textBoxQuery.Select(0, this.textBoxQuery.Text.Length);
         }
         #endregion
-        
+
     }
 }
